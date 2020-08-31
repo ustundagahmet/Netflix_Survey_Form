@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 id="title">NET<span>FLIX</span>
+        </h1>
+
+        <h3 id="description">
+            Thank you for signing up at Netflix. Tell us more about yourself
+        </h3>
+
+        <form action="result.html" id="survey_form" method="GET" name="form" target="_blank">
+            
+            <div class="box">
+                <label for="name" id="name_label">Name</label><br>
+                <input type="text" id="name" name="name" placeholder="enter your name" required>
+            </div>
+
+            <div class="box">
+                <label for="number" id="number_label">Age</label><br>
+                <input type="number" name="age" id="number" placeholder="age" min="18" max="99" required>
+            </div>
+
+            <div class="box">
+                <label for="email" id="email_label">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="enter your Email" required>
+            </div>
+
+            <div class="box">
+                <label for="dropdown" id="dropdown">Content Type</label><br>
+                <select name="content" id="dropdown">
+                    <option value="movie">Movie</option>
+                    <option value="series" selected>Series</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <label id="checkbox">Movie Type</label><br>
+
+                <input type="checkbox" id="first_check" name="movie1" value="Comedy">
+                <label for="first_check">Comedy</label><br>
+
+                <input type="checkbox" id="second_check" name="movie2" value="Action">
+                <label for="second_check">Action</label><br>
+
+                <input type="checkbox" id="third_check" name="movie3" value="Romance" checked>
+                <label for="third_check">Romance</label>
+            </div>
+
+            <div class="box">
+                <label id="radio">Gender</label><br>
+
+                <input type="radio" name="gender" id="first_radio" value="Male">
+                <label for="first_radio">Male</label><br>
+
+                <input type="radio" name="gender" id="second_radio" value="Female" checked>
+                <label for="second_radio">Female</label><br>
+
+                <input type="radio" name="gender" id="third_radio" value="Other">
+                <label for="third_radio">Other</label><br>
+            </div>
+
+            <div class="box box_textarea"> 
+                <!-- Iki tane class vermis olduk. box ve vox_textarea. Onun yerine bir class bir id kullanabilirdik.-->
+                <label for="feedback" id="feed_label">Feed back</label><br>
+                <textarea name="message" class="text_area" id="feedback" cols="30" rows="5" placeholder="any comment" style="resize: none;"></textarea>
+                <!-- style="resize: none;" komutuyla mesaj alanini sabitlemis olduk. Büyüyüp kücülmeyecek -->
+            </div>
+
+            <input type="submit" id="submit" value="Gönder">
+
+        </form>
+    </div>
+</body>
+</html>
